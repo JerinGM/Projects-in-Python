@@ -23,3 +23,4 @@ s = x + float(a)
 #print(s)
 split = float(s/z)
 print(f"each person should pay ${split}")
+You can run the code here as well  https://replit.com/@JERINMATHEW8/tip-calculator-start#main.py
