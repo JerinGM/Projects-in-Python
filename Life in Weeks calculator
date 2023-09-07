@@ -1,0 +1,14 @@
+age = input("What is your current age? ")
+totalMonths = 90 * 12
+#print(totalMonths)
+totalWeeks = 52 * 90
+#print(totalWeeks)
+totalDays = 365 * 90
+#print(totalDays)
+myMonths = int(age) * 12
+myWeeks = int(age) * 52
+myDays = 365 * int(age)
+monthsLeft = totalMonths - myMonths
+weeksLeft = totalWeeks - myWeeks
+daysLeft = totalDays - myDays
+print(f"You have {daysLeft} days, {weeksLeft} weeks, and {monthsLeft} months left.")
