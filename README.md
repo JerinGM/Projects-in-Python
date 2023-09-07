@@ -1,2 +1,2 @@
 # Projects-in-Python
-Beginner Projects
+Beginner Codes and Projects
