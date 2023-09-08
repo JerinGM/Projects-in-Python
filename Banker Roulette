@@ -1,0 +1,10 @@
+# Imported random module
+import random
+# Split string method to follow
+names_string = input("Give me everybody's names, separated by a comma. ")
+names = names_string.split(", ")
+# the below choice command can also give you a random word from the list but I am trying to do this without choice
+#print(random.choice(names))
+#print(names)
+chooseRandomPerson = random.randint(0, (len(names)-1))
+print(names[chooseRandomPerson] + " is going to buy the meal today!")
