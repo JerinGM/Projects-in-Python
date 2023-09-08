@@ -66,4 +66,4 @@ elif letsPlay == 2:
 else:
   print("You have entered an invalid number. Try entering numbers from 0 to 2")
 
-You can play the game here https://replit.com/@JERINMATHEW8/rock-paper-scissors-start#main.py
+You can play the game here -> https://replit.com/@JERINMATHEW8/rock-paper-scissors-start#main.py
