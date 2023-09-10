@@ -1,0 +1,4 @@
+sumOfEven = 0
+for evenNumber in range (2, 101, 2):
+    sumOfEven = sumOfEven + evenNumber
+print(f"The sum of even number is {sumOfEven}")
