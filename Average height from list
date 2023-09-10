@@ -1,0 +1,11 @@
+#not using sum() and len()
+student_heights = input("Input a list of student heights ").split()
+totalHeight = 0
+totalCount = 0
+for n in range(0, len(student_heights)):
+  student_heights[n] = int(student_heights[n])
+  totalHeight = student_heights[n] + totalHeight
+  totalCount += 1
+# without using sum and len functions
+avg = round(totalHeight/totalCount)
+print(avg)
