@@ -1,0 +1,38 @@
+from art import logo
+print(logo)
+alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+
+def caesar(text, shift, direction):
+  newString = str()
+  for letter in text:
+    if letter in alphabet:
+      position = alphabet.index(letter)
+      if direction == "encode":
+        newPosition = position + shift
+        if newPosition > 26:
+          newPosition = newPosition - 26
+        newString += alphabet[newPosition]
+      if direction == "decode":    
+        newPosition = position - shift
+        if newPosition < 0:
+          newPosition = 26 + newPosition
+        newString += alphabet[newPosition]
+    else:
+      newString += letter
+  print(f"Here is the {direction}d result: {newString}") 
+
+finalKey = "yes"
+while finalKey == "yes":
+  direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
+  text = input("Type your message:\n").lower()
+  shift = int(input("Type the shift number:\n"))
+  shift = shift %26
+  caesar(text, shift, direction)
+  tryAgain = input("Type 'yes' if you want to go again, otherwise type 'no'\n")
+  if tryAgain == "no":
+    print("\nGoodbye")
+    finalKey = "no"
+
+# you can run this cipher here https://replit.com/@JERINMATHEW8/caesar-cipher-4-start#main.py
+
+# note - I imported a "logo" from another module
