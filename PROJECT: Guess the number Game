@@ -1,0 +1,55 @@
+import random
+randomNumber = random.randint(1, 100)
+def easy():
+  guess = int(input("Make a guess\n"))
+  if randomNumber < guess:
+    print("Too high")
+    if easyVar != 1:
+      print("Guess again")
+    else:
+      print("you have ran out of guesses. Try again later!!")
+  elif randomNumber > guess:
+    print("Too low")
+    if easyVar != 1:
+      print("Guess again")
+    else:
+      print("you have ran out of guesses. Try again later!!")
+  elif randomNumber == guess:
+    print(f"You guessed the number right its {randomNumber}")
+    return(guess)
+  else:
+    print("All your attempts are done!! Try again later")
+def hard():
+  guess = int(input("Make a guess\n"))
+  if randomNumber < guess:
+    print("Too high")
+    if hardVar != 1:
+      print("Guess again")
+    else:
+      print("you have ran out of guesses. Try again later!!")
+  elif randomNumber > guess:
+    print("Too low")
+    if hardVar != 1:
+      print("Guess again")
+    else:
+      print("you have ran out of guesses. Try again later!!")
+  elif randomNumber == guess:
+    print(f"You guessed the number right its {randomNumber}")
+    return(guess)
+print("Welcome to the number guess game!\n")
+print("I am thinking of a number between 1 and 100.\n")
+difficulty = input("Choose a difficulty. Type 'easy' or 'hard'\n")
+easyVar = 10
+e = int()
+h = int()
+hardVar = 5
+while difficulty == 'easy' and easyVar !=0:
+  print(f"You have {easyVar} attempts remaining to guess the number")
+  e = easy()
+  if e == randomNumber:
+    break
+  easyVar -= 1
+while difficulty == 'hard' and hardVar !=0:
+  print(f"You have {hardVar} attempts remaining to guess the number")
+  h = hard()
+  hardVar -= 1
