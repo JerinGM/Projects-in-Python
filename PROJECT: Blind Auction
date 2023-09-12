@@ -1,0 +1,25 @@
+from replit import clear
+from art import logo
+print(logo)
+print("Welcome to the secret auction.")
+moreBidders = "yes"
+highestBid = 0
+while moreBidders == "yes":
+  nameOfBidder = input("What is your name?\n")
+  bidOfBidder = int(input("What is your bid?\n$"))
+  auctionDictionary = {
+    "Name": nameOfBidder,
+    "Bid": bidOfBidder,
+  }
+  areThereMoreBidders = input("Are there more bidders? Type 'yes' or 'no'.\n")
+  clear()
+  if highestBid < bidOfBidder:
+    highestBid = bidOfBidder
+    if auctionDictionary["Bid"] == highestBid:
+      hnameOfBidder = nameOfBidder
+  if areThereMoreBidders == 'no':
+      moreBidders = 'no'
+      clear()
+      print(f"The winner is {hnameOfBidder} with the bid of {highestBid}")
+
+#you can run my code from here https://replit.com/@JERINMATHEW8/blind-auction-start#main.py
